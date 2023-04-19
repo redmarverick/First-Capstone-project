@@ -21,19 +21,6 @@ links.forEach((link) => {
 
 // dynamic data
 
-function screensize()
-{
-    let x;
-    if(window.innerWidth > 768){
-        x=guests.length;
-        return x;
-    }
-    else {
-        x=2;
-        return x;
-    }
-};
-
 const guests = [
   {
     name: 'Stone Cold',
@@ -82,83 +69,91 @@ const guests = [
       'John Felix Anthony Cena, is a professional wrestler, actor, and former rapper currently signed to WWE. Cena started learning Mandarin Chinese in 2016 to help the WWE expand its reach, and he spoke in Mandarin at a press conference in China.',
     src: "url('img/john-cena.gif')",
     alt: 'you cant see him cause hes john cena',
-  }
+  },
 
 ];
 
+function screensize() {
+  let x;
+  if (window.innerWidth > 768) {
+    x = guests.length;
+    return x;
+  }
+
+  x = 2;
+  return x;
+}
+
 const guestsContainer = document.getElementsByClassName('guests-container')[0];
 
-function generateGuests(x){
-    for(let i = 0; i < guests.length ; i+=1){
+function generateGuests(x) {
+  for (let i = 0; i < guests.length; i += 1) {
     const guestWhat = document.createElement('div');
-    guestWhat.classList="guestWhat";
-    guestWhat.id = "guestWhat";
+    guestWhat.classList = 'guestWhat';
+    guestWhat.id = 'guestWhat';
     const guestArticle = document.createElement('article');
-    guestArticle.id = "guestArt";
-    guestArticle.classList = "guestArt flex justify-start";
-    if(x<3 && i>1){guestArticle.classList.toggle("hidden");}
+    guestArticle.id = 'guestArt';
+    guestArticle.classList = 'guestArt flex justify-start';
+    if (x < 3 && i > 1) { guestArticle.classList.toggle('hidden'); }
 
     const guestImgContainer = document.createElement('div');
-    guestImgContainer.classList = "min-w-[140px] md:flex flex-col";
+    guestImgContainer.classList = 'min-w-[140px] md:flex flex-col';
     guestArticle.appendChild(guestImgContainer);
 
     const guestImgFig = document.createElement('img');
-    guestImgFig.classList = "trans-img";
-    if(screensize()>2){
-        guestImgFig.src = 'img/transparent.jpg';
+    guestImgFig.classList = 'trans-img';
+    if (screensize() > 2) {
+      guestImgFig.src = 'img/transparent.jpg';
+    } else {
+      guestImgFig.src = 'img/flag-mobile.png';
     }
-    else{
-        guestImgFig.src = 'img/flag-mobile.png';
-    }
-    
+
     guestImgFig.alt = guests[i].alt;
-    guestImgFig.setAttribute = ('alt','transparent image background');
+    guestImgFig.setAttribute = ('alt', 'transparent image background');
     guestImgContainer.appendChild(guestImgFig);
 
     const guestImg = document.createElement('div');
-    guestImg.classList = "guests-img";
+    guestImg.classList = 'guests-img';
     guestImg.style.backgroundImage = guests[i].src;
     guestImgContainer.appendChild(guestImg);
 
     const cardContainer = document.createElement('div');
-    cardContainer.classList = "card-content md:ml-4 ml-8";
+    cardContainer.classList = 'card-content md:ml-4 ml-8';
     guestArticle.appendChild(cardContainer);
 
     const cardTitle = document.createElement('h2');
-    cardTitle.classList = "card-title text-xl font-bold";
+    cardTitle.classList = 'card-title text-xl font-bold';
     cardTitle.textContent = guests[i].name;
     cardContainer.appendChild(cardTitle);
 
     const cardProf = document.createElement('h3');
-    cardProf.classList = "card-pro font-medium text-sm pt-1";
+    cardProf.classList = 'card-pro font-medium text-sm pt-1';
     cardProf.textContent = guests[i].profession;
     cardContainer.appendChild(cardProf);
 
     const sLine = document.createElement('div');
-    sLine.classList = "s-line my-1";
+    sLine.classList = 's-line my-1';
     cardContainer.appendChild(sLine);
 
     const cardDesc = document.createElement('p');
-    cardDesc.classList = "w-max-64 md:w-48 text-sm card-desc";
+    cardDesc.classList = 'w-max-64 md:w-48 text-sm card-desc';
     cardDesc.textContent = guests[i].description;
     cardContainer.appendChild(cardDesc);
 
     guestWhat.appendChild(guestArticle);
     guestsContainer.appendChild(guestWhat);
-};
+  }
 }
 
-function unhidden(){
-    var guestArticle = document.getElementsByClassName('guestArt');
-    for(let i = 2;i < guests.length; i+=1){
-        guestArticle[i].classList.toggle("hidden");
-    }
-    var butMore = document.getElementById('more');
-    butMore.classList.toggle('hidden');
+function unhidden() {
+  const guestArticle = document.getElementsByClassName('guestArt');
+  for (let i = 2; i < guests.length; i += 1) {
+    guestArticle[i].classList.toggle('hidden');
+  }
+  const butMore = document.getElementById('more');
+  butMore.classList.toggle('hidden');
 }
-
-
 
 window.onload = () => {
-    generateGuests(screensize());
+  generateGuests(screensize());
 };

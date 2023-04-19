@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
 :root {
-  --font-theme:rgb(255, 218, 0);
+  --font-theme: rgb(255, 218, 0);
   --bg-color: #3e3e3e;
   --font-second: #d3d3d3;
 }
 
 html {
-    scroll-behavior: smooth;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Lato', sans-serif;
-    overflow-x: hidden;
-  }
+  scroll-behavior: smooth;
+}
 
-  /* navbar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+}
+
+/* navbar */
 
 .icons {
   color: var(--font-theme);
@@ -97,7 +97,7 @@ nav {
 }
 
 
-  /* hero section */
+/* hero section */
 
 .hero {
   background-image: url(img/background-center.png);
@@ -112,10 +112,9 @@ nav {
 }
 
 .hero-title {
-  background-clip: text;
-	-webkit-background-clip: text;
-	color: transparent;
-	background-image: url('img/wwe-belt-title.png');
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: url('img/wwe-belt-title.png');
   font-weight: 900;
   background-position: center;
   background-size: contain;
@@ -125,6 +124,10 @@ nav {
 
 .hero-desc {
   border: 1px white;
+}
+
+.hero-desc-ab {
+  background-color: rgb(100, 100, 100, 0.6);
 }
 
 /* guests section */
@@ -172,12 +175,18 @@ nav {
 }
 
 .program-card {
-  background-color: rgb(99,99,99,0.3);
+  background-color: rgb(99, 99, 99, 0.3);
   width: 22rem;
   align-self: flex-start;
 }
 
-#program h2, #program h3, .program-desc {
+.program-card h2 {
+  color: var(--font-theme) !important;
+}
+
+#program h2,
+#program h3,
+.program-desc {
   color: white;
 }
 
@@ -185,10 +194,6 @@ nav {
   color: white;
   font-size: 3em;
   line-height: 1.4em;
-}
-
-.program-card h2 {
-  color: var(--font-theme) !important;
 }
 
 .title-hero {
@@ -204,11 +209,11 @@ nav {
 }
 
 #invite {
-    background-color: var(--font-theme);
-    width: 80%;
-    text-align: center;
-    font-size: 1.2em;
-    font-weight: 900;
+  background-color: var(--font-theme);
+  width: 80%;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 900;
 }
 
 #partners {
@@ -219,6 +224,10 @@ nav {
 .partnerLogo {
   width: auto;
   height: 5em;
+}
+
+.footer {
+  visibility: visible;
 }
 
 @media (max-width: 768px) {
@@ -238,12 +247,13 @@ nav {
     text-align: left;
   }
 
-  footer {
+  .hidden {
     visibility: hidden;
   }
 
-  .hidden {
+  .footer {
     visibility: hidden;
+    display: none !important;
   }
 
   #more {
