@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+:root {
+  --font-theme:rgb(255, 218, 0);
+  --bg-color: #3e3e3e;
+  --font-second: #d3d3d3;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* navbar */
+
+.icons {
+  color: var(--font-theme);
+}
+
+nav {
+  color: var(--font-theme);
+}
+
+.menu-links a:hover {
+  color: var(--font-theme);
+}
+
+.campaign {
+  border: 2px solid var(--font-theme);
+  color: #ec5242;
+}
+
+/* hamburger */
+
+.hamburger {
+  cursor: pointer;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  transition: all 0.5s;
+  margin-top: 7.5px;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background-color: var(--font-theme);
+  top: 0;
+  left: 0;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.ham-open {
+  transform: rotate(90deg);
+}
+
+.ham-open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background-color: var(--font-theme);
+}
+
+.ham-open .hamburger-middle {
+  display: none;
+}
+
+.ham-open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background-color: var(--font-theme);
+}
+
+.overlay {
+  background-color: var(--bg-color);
+  opacity: 0.9;
+  backdrop-filter: blur(1rem);
+}
+
+
+  /* hero section */
+
+.hero {
+  background-image: url(img/background-center.png);
+  background-size: cover;
+  background-position: center;
+  background-position-y: top;
+  color: var(--font-theme);
+}
+
+#hero-content {
+  height: 70vh;
+}
+
+.hero-title {
+  background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-image: url('img/wwe-belt-title.png');
+  font-weight: 900;
+  background-position: center;
+  background-size: contain;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.hero-desc {
+  border: 1px white;
+}
+
+/* guests section */
+
+.trans-img {
+  width: 80px;
+  height: 80px;
+}
+
+.guests-title {
+  color: #272a31;
+}
+
+.guests-img {
+  width: 120px;
+  height: 60%;
+  position: relative;
+  bottom: 60px;
+  left: 21px;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-pro {
+  color: var(--font-theme);
+}
+
+.line {
+  height: 1px;
+  color: var(--primary-color);
+  width: 55px;
+  border: 1px solid var(--font-theme);
+  margin: 10px auto 0;
+}
+
+.s-line {
+  height: 2px;
+  width: 25px;
+  background-color: var(--font-second);
+}
+
+#program {
+  background-image: url("img/background-middle.png");
+  background-size: 50px;
+}
+
+.program-card {
+  background-color: rgb(99,99,99,0.3);
+  width: 22rem;
+  align-self: flex-start;
+}
+
+#program h2, #program h3, .program-desc {
+  color: white;
+}
+
+.program-card i {
+  color: white;
+  font-size: 3em;
+  line-height: 1.4em;
+}
+
+.program-card h2 {
+  color: var(--font-theme) !important;
+}
+
+.title-hero {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.title-desc {
+  height: 5em;
+}
+
+#invite {
+    background-color: var(--font-theme);
+    width: 80%;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+#partners {
+  background-color: var(--bg-color);
+  color: var(--font-second);
+}
+
+.partnerLogo {
+  width: auto;
+  height: 5em;
+}
+
+@media (max-width: 768px) {
+  .program-card {
+    width: 26rem;
+  }
+
+  .title-desc {
+    width: 20em;
+  }
+
+  .title-hero {
+    width: 44%;
+  }
+
+  .program-desc {
+    text-align: left;
+  }
+
+  footer {
+    visibility: hidden;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  #more {
+    border: 1px black;
+    border-style: solid;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+  }
+
+  #guestWhat {
+    margin-bottom: 2em;
+  }
+
+  .partnerLogo {
+    height: auto;
+  }
+}
