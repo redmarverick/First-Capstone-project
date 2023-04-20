@@ -50,6 +50,16 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **[The program page will be built]**
+- **[Multiple language feature]**
+- **[Dark mode for those who drop a tear on white websites]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
@@ -120,6 +130,9 @@ Give a ⭐️ if you like this project!
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank nodoby, as nobody believed i would finish this, even myself.
+Also, i want to include Cindy Chin for the design:
+- Original design idea by [Cindy Chin](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) in Behance.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

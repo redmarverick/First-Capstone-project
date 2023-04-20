@@ -2,7 +2,7 @@
 
 :root {
   --font-theme: rgb(255, 218, 0);
-  --bg-color: #3e3e3e;
+  --bg-color: #272a31;
   --font-second: #d3d3d3;
 }
 
@@ -176,7 +176,7 @@ nav {
 
 .program-card {
   background-color: rgb(99, 99, 99, 0.3);
-  width: 22rem;
+  width: 17rem;
   align-self: flex-start;
 }
 
@@ -228,6 +228,41 @@ nav {
 
 .footer {
   visibility: visible;
+}
+
+.past1 {
+  background-image:
+    linear-gradient(#f5331dbf, #f2331ea2),
+    url(img/wwe-1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
+
+.past2 {
+  background-image:
+    linear-gradient(#f5331dbf, #f2331ea2),
+    url(img/wwe-2.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
+
+.past1:hover,
+.past2:hover {
+  filter: grayscale(10);
+}
+
+.past-date,
+.past-desc {
+  color: #fff;
+}
+
+.overlay-past {
+  background-color: var(--primary-color);
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
