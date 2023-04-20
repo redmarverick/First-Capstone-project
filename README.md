@@ -28,7 +28,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 My Portfolio <a name="about-project"></a>
+# 📖 WWE International Rendezvous 2023 <a name="about-project"></a>
 
 **WWE International Rendezvous 2023** is my first capstone project for microverse.
 
